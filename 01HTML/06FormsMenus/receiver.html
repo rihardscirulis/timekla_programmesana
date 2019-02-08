@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Maintaining State With Cookies</title>
+ </head>
+ <body>
+     <form id="myForm" action="submit.mumps.cgi" method="POST">
+         <input type="text" name="title" />
+         <textarea name="text"></textarea>
+     </form>
+     <script>
+         var COOKIES = {};
+         var cookieStr = document.cookie;
+         cookieStr.split(/; /).forEach(function(keyValuePair) { // not necessarily the best way to parse cookies
+             var cookieName = keyValuePair.replace(/=.*$/, ""); // some decoding is probably necessary
+             var cookieValue = keyValuePair.replace(/^[^=]*\=/, ""); // some decoding is probably necessary
+             COOKIES[cookieName] = cookieValue;
+         });
+         document.getElementById("myForm").getElementsByTagName("input")[0].value = COOKIES["form/title"];
+         document.getElementById("myForm").getElementsByTagName("textarea")[0].value = COOKIES["form/text"];
+     </script>
+ </body>
+</html>

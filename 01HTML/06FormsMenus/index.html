@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Maintaining State With Cookies</title>
+ </head>
+ <body>
+     <div>
+         Setting cookies and redirecting...
+     </div>
+     <script>
+         // document.cookie is not a real string
+         document.cookie = 'form/title=My Name is Richard; expires=Tue, 29 Aug 2019 12:00:01 UTC'
+         document.cookie = 'form/text=I am demoing how to use cookies in JavaScript; expires=Tue, 29 Aug 2019 12:00:01 UT';
+         setTimeout(function(){
+             window.location = "./receiver.html";
+         }, 1000);
+     </script>
+ </body>
+</html>

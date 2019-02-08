@@ -1,0 +1,28 @@
+aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+body {
+    counter-reset: nav;
+}
+
+nav {
+    border: 1px;
+
+    border-style: dashed;
+}
+
+nav>a {
+    padding: 10px;
+}
+
+nav>a::before {
+    counter-increment: nav;
+    content: counter(nav);
+}

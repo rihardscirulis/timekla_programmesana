@@ -1,0 +1,7 @@
+aside {
+    width: 50%;
+    float: right;
+    color: purple;
+    padding: 5px;
+    box-shadow: inset 5px 0 8px -6px green;
+}
