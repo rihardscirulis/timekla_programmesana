@@ -63,3 +63,8 @@ exports.deletePainter = function(req, res) {
     return res.send(result);
   });
 };
+
+exports.updatePainter = function(req, res) {
+  let id = req.params.name;
+  Painter.update('id': );
+}
