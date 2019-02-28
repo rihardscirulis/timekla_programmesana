@@ -1,0 +1,18 @@
+{
+  "name": "testnode",
+  "version": "0.0.1",
+  "description": "Some test example for class",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "example",
+    "class"
+  ],
+  "author": "rihardscirulis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
