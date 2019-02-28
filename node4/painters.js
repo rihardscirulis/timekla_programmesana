@@ -62,11 +62,4 @@ exports.deletePainter = function(req, res) {
   Painter.deleteOne({'id': id}, function(err, result) {
     return res.send(result);
   });
-}
-
-exports.updatePainter = function(req, res) {
-  let name = req.params.name;
-  Painter.deleteMany({'name': {$regex: '.*'+name+'.*'}}, function(err, result) {
-    return res.send(result);
-  });
-}
+};
